@@ -3,16 +3,24 @@
 </script>
 
 <style>
-  span {
+  div {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     color: #ff3e00;
-    text-transform: uppercase;
+    text-transform: lower;
     font-size: 4em;
     font-weight: 100;
+  }
+
+  span {
+    font-weight: 800;
   }
 </style>
 
 <svelte:options tag="pf-sample" />
 
-<span>Hello {name}!</span>
+<div>
+  Hello from
+  <span>{name}</span>
+  !
+</div>

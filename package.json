@@ -1,0 +1,27 @@
+{
+  "name": "@propfull/kit",
+  "version": "0.0.0-alpha.1",
+  "description": "A design system for propfull",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo 'todo lel 😅'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/propfull/kit.git"
+  },
+  "keywords": [
+    "awesome",
+    "design-system",
+    "svelte",
+    "ui",
+    "web-components",
+    "web-development"
+  ],
+  "author": "Saurav Sahu <mrsauravsahu@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/propfull/kit/issues"
+  },
+  "homepage": "https://github.com/propfull/kit#readme"
+}

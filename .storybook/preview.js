@@ -10,6 +10,7 @@ import {
 
 // setCustomElements(customElements);
 import '../dist'
+import '../styles/globals.css'
 
 addParameters({
   docs: {

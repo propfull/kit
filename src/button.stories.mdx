@@ -1,0 +1,55 @@
+import { Story, Preview } from '@storybook/addon-docs/blocks';
+import { html } from 'lit-html'; 
+
+# pf-button
+
+The good ol' button. This extends the native HTML button with a bit of styling...
+
+<Meta title="Atoms/pf-button" />
+
+### A simple button
+<Preview withSource='open'>
+    <Story name='default'>
+        {() => html`<pf-button>click me</pf-button>`}
+    </Story>
+</Preview>
+
+
+### With icons or emojis
+You can also add icons along with regular text.
+
+<Preview withSource='open'>
+    <Story name='with icon'>
+        {() => html`<pf-button>👇 download</pf-button>`}
+    </Story>
+</Preview>
+
+### Slot other elements
+Buttons can also have nested children as its content
+
+<Preview>
+    <Story name="nesting">
+        {() => html`
+            <pf-button> 
+                <svg viewBox="0 0 8 8" width="5rem" height="5rem">
+                    <circle cx="2" cy="2" r="1" fill="white" />
+                    <circle cx="4" cy="4" r="1" fill="white" />
+                    <circle cx="6" cy="6" r="1" fill="white" />
+                </svg>
+                <div>SVGs are awesome!</div>
+            </pf-button>
+        `}
+    </Story>
+</Preview>
+
+### Other states
+Buttons can also have different states
+
+#### 1. Disabled
+This makes sure the button cannot be clicked and shows an appropriate cursor.
+
+<Preview withSource='open'>
+    <Story name='disabled'>
+        {() => html`<pf-button disabled=${true}>refreshing...</pf-button>`}
+    </Story>
+</Preview>

@@ -1,0 +1,13 @@
+:root {
+    --pf-accent--raw: 41, 60, 87;
+
+    --pf-accent: rgb(var(--pf-accent--raw));
+    --pf-accent--disabled: rgba(var(--pf-accent--raw), 0.75);
+    --pf-accent-font-color: rgb(255, 255, 255);
+
+    --pf-shadow--normal: 0 0.4rem 0.6rem #868686;
+    --pf-shadow--focus: 0 0.25rem 0.5rem #a7a7a7;
+
+    --pf-tn--default: 0.2s linear;
+}
+

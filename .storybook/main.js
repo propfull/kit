@@ -12,6 +12,9 @@ const webpackConfig = (config) => {
 
 module.exports = {
   stories: ['../src/**/*.stories.@(js|mdx)'],
-  addons: ['@storybook/addon-docs'],
+  addons: [
+    '@storybook/addon-docs',
+    '@storybook/addon-actions/register'
+  ],
   webpackFinal: webpackConfig
 };

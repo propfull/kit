@@ -17,8 +17,6 @@
   }
 </style>
 
-<svelte:options tag="pf-sample" />
-
 <div>
   Hello from
   <span>{name}</span>

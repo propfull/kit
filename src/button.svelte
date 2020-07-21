@@ -4,7 +4,8 @@
 
 <style>
   button {
-    border: none;
+    outline: none;
+    border: 0.25rem solid transparent;
     background-color: var(--pf-accent);
     color: var(--pf-accent-font-color);
     padding: 0.75rem;
@@ -13,7 +14,7 @@
     cursor: pointer;
     box-shadow: var(--pf-shadow--normal);
     transition: box-shadow var(--pf-tn--default),
-      transform var(--pf-tn--default);
+      transform var(--pf-tn--default), background-color var(--pf-tn--default);
   }
 
   button:hover:enabled {
@@ -31,9 +32,12 @@
     cursor: not-allowed;
     box-shadow: none;
   }
+
+  button:focus {
+    background-color: var(--pf-accent--focus);
+  }
 </style>
 
-<svelte:options tag="pf-button" />
 <button type="button" {disabled}>
   <slot />
 </button>

@@ -1,5 +1,5 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
-import { html } from 'lit-html'
+import PfSample from './sample.svelte';
 
 # pf-sample
 
@@ -9,6 +9,11 @@ This is a sample component from the kit.
 
 <Preview withSource='open'>
   <Story name='default'>
-    {() => html`<pf-sample name='@propfull/kit' />`}
+    {{
+      Component: PfSample,
+      props: {
+        name: '@propfull/kit'
+      }
+    }}
   </Story>
 </Preview>

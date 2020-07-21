@@ -19,13 +19,13 @@ export default {
     {
       file: pkg.module,
       format: 'es',
-      sourcemap: production,
+      sourcemap: !production,
     },
     {
       file: pkg.main,
       format: 'umd',
       name,
-      sourcemap: production,
+      sourcemap: !production,
     },
   ],
   plugins: [
@@ -34,7 +34,7 @@ export default {
     svelte({
       dev: !production,
       css: css => {
-        css.write('dist/index.css', production);
+        css.write('dist/index.css', !production);
       },
       preprocess: autoPreprocess(),
       customElement: true,
@@ -44,7 +44,7 @@ export default {
         'svelte',
       ],
     }),
-    production && terser(),
+    !production && terser(),
   ],
   watch: {
     clearScreen: false,

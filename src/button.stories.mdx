@@ -1,4 +1,5 @@
 import { Story, Preview } from '@storybook/addon-docs/blocks'; 
+import { action } from '@storybook/addon-actions';
 import { html } from 'lit-html';
 
 import PfButton from './wrappers/button.wrapper.svelte';
@@ -17,7 +18,8 @@ The good ol' button. This extends the native HTML button with a bit of styling..
             Component: PfButton,
             props: {
                 content: '@propfull/button'
-            }
+            },
+            on: { click: action('on:click') }
         }}
     </Story>
 </Preview>
@@ -31,7 +33,8 @@ You can also add icons along with regular text.
     <Story name='with icon'>
         {{
             Component: PfButton,
-            props: { content: '👇 download' }
+            props: { content: '👇 download' },
+            on: { click: action('on:click') }
         }}
     </Story>
 </Preview>
@@ -51,7 +54,8 @@ PfButtons can also have nested children as its content
                     <circle cx="6" cy="6" r="1" fill="white" />
                 </svg>
                 <div>SVGs are awesome!</div>`
-            }
+            },
+            on: { click: action('on:click') }
         }}
     </Story>
 </Preview>
@@ -69,7 +73,8 @@ This makes sure the button cannot be clicked and shows an appropriate cursor.
             props: {
                 content: 'refreshing...',
                 disabled: true
-            }
+            },
+            on: { click: action('on:click') }
         }}
     </Story>
 </Preview>

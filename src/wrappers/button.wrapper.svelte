@@ -5,6 +5,6 @@
   export let disabled;
 </script>
 
-<Button {disabled}>
+<Button {disabled} on:click>
   {@html content}
 </Button>

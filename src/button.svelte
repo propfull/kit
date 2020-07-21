@@ -38,6 +38,6 @@
   }
 </style>
 
-<button type="button" {disabled}>
+<button type="button" {disabled} on:click>
   <slot />
 </button>

@@ -37,7 +37,6 @@ export default {
         css.write('dist/index.css', !production);
       },
       preprocess: autoPreprocess(),
-      customElement: true,
     }),
     resolve({
       dedupe: [

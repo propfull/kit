@@ -6,7 +6,7 @@
   div {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    color: #ff3e00;
+    color: var(--pf-accent);
     text-transform: lower;
     font-size: 4em;
     font-weight: 100;

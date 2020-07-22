@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - latest
-      - setup/deploy-storybook
 
 env:
   NODE_VERSION: "12.8.0"

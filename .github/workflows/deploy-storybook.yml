@@ -1,0 +1,43 @@
+name: "Deploy static Storybook"
+
+on:
+  push:
+    branches:
+      - latest
+      - setup/deploy-storybook
+
+env:
+  NODE_VERSION: "12.8.0"
+  EXPORT_DIRECTORY: storybook-static
+  GITHUB_PAGES_PUBLISH_BRANCH: gh-pages
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: checkout to branch
+        uses: actions/checkout@v2
+
+      - name: install pnpm
+        uses: pnpm/action-setup@v1.2.0
+        with:
+          version: 4.11.1
+          run_install: |
+            - recursive: true
+
+      - name: setup node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: build static storybook
+        run: pnpm run build-storybook
+
+      - name: deploy storybook to github pages
+        if: ${{ github.ref == env.DEPLOY_BRANCH_REF }}
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ${{ env.EXPORT_DIRECTORY }}
+          publish_branch: ${{ env.GITHUB_PAGES_PUBLISH_BRANCH }}

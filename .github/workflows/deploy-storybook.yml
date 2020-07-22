@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
-      - name: checkout to branch
+      - name: Checkout to branch
         uses: actions/checkout@v2
 
       - name: install pnpm
@@ -26,15 +26,15 @@ jobs:
           run_install: |
             - recursive: true
 
-      - name: setup node.js
+      - name: Setup node.js
         uses: actions/setup-node@v1
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      - name: build static storybook
+      - name: Build static storybook
         run: pnpm run build-storybook
 
-      - name: deploy storybook to github pages
+      - name: Deploy storybook to github pages
         if: ${{ github.ref == env.DEPLOY_BRANCH_REF }}
         uses: peaceiris/actions-gh-pages@v3
         with:

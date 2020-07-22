@@ -35,7 +35,6 @@ jobs:
         run: pnpm run build-storybook
 
       - name: Deploy storybook to github pages
-        if: ${{ github.ref == env.DEPLOY_BRANCH_REF }}
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

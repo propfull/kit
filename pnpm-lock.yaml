@@ -12,6 +12,7 @@ devDependencies:
   '@storybook/addon-docs': 5.3.19_0fd7be26531699f40c4d5aa715343513
   '@storybook/cli': 5.3.19
   '@storybook/svelte': 5.3.19_672e3fef6d235464736b9aeb0b802fb1
+  '@tsconfig/svelte': 1.0.2
   babel-loader: 8.1.0_@babel+core@7.10.5
   babel-plugin-bundled-import-meta: 0.3.2_@babel+core@7.10.5
   lit-html: 1.2.1
@@ -21,7 +22,7 @@ devDependencies:
   rollup-plugin-svelte: 5.2.3_rollup@2.22.1+svelte@3.24.0
   rollup-plugin-terser: 6.1.0_rollup@2.22.1
   svelte: 3.24.0
-  svelte-check: 0.1.54_@babel+core@7.10.5
+  svelte-check: 0.1.55_@babel+core@7.10.5
   svelte-loader: 2.13.6_svelte@3.24.0
   svelte-preprocess: 4.0.8_abca325fd8b5e79aa458d7feb31fc7fb
   tslib: 2.0.0
@@ -1959,6 +1960,10 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-XIB2XbzHTN6ieIjfIMV9hlVcfPU26s2vafYWQcZHWXHOxiaRZYEDKEwdl129Zyg50+foYV2jCgtrqSA6qNuNSA==
+  /@tsconfig/svelte/1.0.2:
+    dev: true
+    resolution:
+      integrity: sha512-GkTFn433Sw5mnrrA0iB0SXubgFu51cwU8qDCeTmCwrhMEaz0pERPgODfXf50jpiUZstuNdqGUlygtaYGhpWz2Q==
   /@types/anymatch/1.3.1:
     dev: true
     resolution:
@@ -2096,7 +2101,7 @@ packages:
       integrity: sha512-yy7HuzQhj0dhGpD8RLXSZWEkLsV9ibvxvi6EiJ3bkqLAO1RGo0WbkWQiwpRlSFymTJRz0d3k5LM3kkx8ArDbLw==
   /@types/sass/1.16.0:
     dependencies:
-      '@types/node': 14.0.23
+      '@types/node': 14.0.24
     dev: true
     resolution:
       integrity: sha512-2XZovu4NwcqmtZtsBR5XYLw18T8cBCnU2USFHTnYLLHz9fkhnoEMoDsqShJIOFsFhn5aJHjweiUUdTrDGujegA==
@@ -10921,12 +10926,12 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-oRSIpR8pxT1Wr2FquTNnGet79b3BWljqOuoW/h4oBhxJ/HUbX5nX6JSruTkvXDCFMwDPvsaTTbvMLKZWSy0R5g==
-  /svelte-check/0.1.54_@babel+core@7.10.5:
+  /svelte-check/0.1.55_@babel+core@7.10.5:
     dependencies:
       chalk: 4.1.0
       glob: 7.1.6
       minimist: 1.2.5
-      svelte-language-server: 0.10.73_@babel+core@7.10.5
+      svelte-language-server: 0.10.74_@babel+core@7.10.5
       vscode-languageserver: 6.1.1
       vscode-languageserver-protocol: 3.15.3
       vscode-languageserver-types: 3.15.1
@@ -10936,12 +10941,12 @@ packages:
     peerDependencies:
       '@babel/core': '*'
     resolution:
-      integrity: sha512-fVrk3mbhPASIr8SeBSW+cPmrKXLJLDUZkXFoyOREaiN7v2JcGo/1cV/OqlW1z66rEkPSHV0vTpgfJKLEkL4W5w==
+      integrity: sha512-jdTmpMe1WLQyciNLZ3/8ApwPmpbKbF0RLu480GDapLp+eAjtVMY1j1afWSUgkc6aeTEvoMA29MnICz+rI6mrYA==
   /svelte-dev-helper/1.1.9:
     dev: true
     resolution:
       integrity: sha1-fRh9tcbNu9ZNdaMvkbiZi94yc8M=
-  /svelte-language-server/0.10.73_@babel+core@7.10.5:
+  /svelte-language-server/0.10.74_@babel+core@7.10.5:
     dependencies:
       cosmiconfig: 6.0.0
       estree-walker: 2.0.1
@@ -10952,7 +10957,7 @@ packages:
       source-map: 0.7.3
       svelte: 3.24.0
       svelte-preprocess: 3.9.12_abca325fd8b5e79aa458d7feb31fc7fb
-      svelte2tsx: 0.1.59_svelte@3.24.0+typescript@3.9.7
+      svelte2tsx: 0.1.60_svelte@3.24.0+typescript@3.9.7
       typescript: 3.9.7
       vscode-css-languageservice: 4.1.0
       vscode-emmet-helper: 1.2.17
@@ -10965,7 +10970,7 @@ packages:
     peerDependencies:
       '@babel/core': '*'
     resolution:
-      integrity: sha512-bFrWVt7ZZrrbeeC6YQU2k+DxsmVc3kHSpaMAaa9qVqmXKjvp42S81euzGIJsc9VBzAnPoio8pXPepmachc8IVw==
+      integrity: sha512-IeBP0B0PLP4bahxHeI1/uK+hkAlanbuEYOVRp2RRuwldh0Z4lcMrVmfvmKEMy2kXA4Cvsbw4Cc56D2gU4vAoTw==
   /svelte-loader/2.13.6_svelte@3.24.0:
     dependencies:
       loader-utils: 1.4.0
@@ -11082,7 +11087,7 @@ packages:
       node: '>= 8'
     resolution:
       integrity: sha512-VFXom6EP2DK83kxy4ZlBbaZklSbZIrpNH3oNXlPYHJUuW4q1OuAr3ZoYbfIVTVYPDgrI7Yq0gQcOhDlAtO4qfw==
-  /svelte2tsx/0.1.59_svelte@3.24.0+typescript@3.9.7:
+  /svelte2tsx/0.1.60_svelte@3.24.0+typescript@3.9.7:
     dependencies:
       dedent-js: 1.0.1
       pascal-case: 3.1.1
@@ -11093,7 +11098,7 @@ packages:
       svelte: ^3.24
       typescript: ^3.9.3
     resolution:
-      integrity: sha512-RdaFR602T6uDYN5I4usELTQsYWB37n1E9DZ9vc7oYvH65jjveJBdiOi7aiamLLl96JJIR4RjIjVnsKV2ZbsN7A==
+      integrity: sha512-T69qVkeMybBSFKc5/0pq+Au498bFYPMiiaIatKOWSL7blg5iEdDzZHFDKMDTuefP3RdctbQIP8HfIgmEfV2TCg==
   /symbol.prototype.description/1.0.2:
     dependencies:
       es-abstract: 1.17.6
@@ -12370,6 +12375,7 @@ specifiers:
   '@storybook/addon-docs': ^5.3.19
   '@storybook/cli': ^5.3.19
   '@storybook/svelte': ^5.3.19
+  '@tsconfig/svelte': ^1.0.2
   babel-loader: ^8.1.0
   babel-plugin-bundled-import-meta: ^0.3.2
   lit-html: ^1.2.1
@@ -12379,7 +12385,7 @@ specifiers:
   rollup-plugin-svelte: ^5.0.0
   rollup-plugin-terser: ^6.1.0
   svelte: ^3.0.0
-  svelte-check: ^0.1.51
+  svelte-check: ^0.1.55
   svelte-loader: ^2.13.6
   svelte-preprocess: ^4.0.8
   tslib: ^2.0.0

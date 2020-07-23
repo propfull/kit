@@ -1,17 +1,19 @@
-name: "Deploy static Storybook"
+name: "Build @propfull/kit library"
 
 on:
+  pull_request:
+    branches:
+      - latest
   push:
     branches:
       - latest
 
 env:
   NODE_VERSION: "12.8.0"
-  EXPORT_DIRECTORY: storybook-static
-  GITHUB_PAGES_PUBLISH_BRANCH: gh-pages
+  ARTEFACT_DIRECTORY: dist
 
 jobs:
-  build_and_deploy_storybook:
+  build_library:
     runs-on: ubuntu-20.04
 
     steps:
@@ -30,12 +32,11 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      - name: Build static storybook
-        run: pnpm run build-storybook
+      - name: Build project
+        run: pnpm run build
 
-      - name: Deploy storybook to github pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Upload library artefact
+        uses: actions/upload-artifact@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ${{ env.EXPORT_DIRECTORY }}
-          publish_branch: ${{ env.GITHUB_PAGES_PUBLISH_BRANCH }}
+          name: kit
+          path: ${{ env.ARTEFACT_DIRECTORY }}

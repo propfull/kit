@@ -1,5 +1,8 @@
 <script lang="ts">
+  import { Theme } from "../typings/theme";
+
   export let disabled: boolean = false;
+  export let theme: Theme = "light";
 </script>
 
 <style>

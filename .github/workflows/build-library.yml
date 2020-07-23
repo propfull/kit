@@ -4,6 +4,9 @@ on:
   pull_request:
     branches:
       - latest
+  push:
+    branches:
+      - latest
 
 env:
   NODE_VERSION: "12.8.0"

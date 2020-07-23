@@ -30,7 +30,7 @@ export default {
   ],
   plugins: [
     commonjs(),
-    typescript({ sourceMap: true }),
+    typescript({ sourceMap: !production }),
     svelte({
       dev: !production,
       css: css => {

@@ -1,4 +1,8 @@
 :root {
+    --pf-tn--default: 0.2s linear;
+}
+
+.pf-light {
     --pf-accent: rgb(102, 190, 69);
     --pf-accent--focus: rgb(39, 112, 12);
     --pf-accent--disabled: rgb(140, 177, 127);
@@ -6,7 +10,14 @@
 
     --pf-shadow--normal: 0 0.4rem 0.5rem rgba(102, 190, 69, 0.4);
     --pf-shadow--focus: 0 0.25rem 0.25rem rgba(102, 190, 69, 0.6);
-
-    --pf-tn--default: 0.2s linear;
 }
 
+.pf-dark {
+    --pf-accent: rgb(43, 45, 62);
+    --pf-accent--focus: #494b55;
+    --pf-accent--disabled: #7b7b7b;
+    --pf-accent-font-color: rgb(255, 255, 255);
+
+    --pf-shadow--normal: 0 0.4rem 0.5rem rgba(43, 45, 62, 0.4);
+    --pf-shadow--focus: 0 0.25rem 0.25rem rgba(43, 45, 62, 0.6);
+}

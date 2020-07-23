@@ -41,6 +41,6 @@
   }
 </style>
 
-<button type="button" {disabled} on:click>
+<button type="button" {disabled} on:click class={`pf-${theme}`}>
   <slot />
 </button>

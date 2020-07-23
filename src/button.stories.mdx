@@ -60,6 +60,22 @@ PfButtons can also have nested children as its content
     </Story>
 </Preview>
 
+### Theme
+Buttons can also be themed - with the `theme` prop, the default being the `light` theme.
+Here's how a button looks with the `dark` theme
+<Preview withSource='open'>
+    <Story name='dark'>
+        {{
+            Component: PfButton,
+            props: {
+                content: 'dark mode',
+                theme: 'dark'
+            },
+            on: { click: action('on:click') }
+        }}
+    </Story>
+</Preview>
+
 ### Other states
 PfButtons can also have different states
 

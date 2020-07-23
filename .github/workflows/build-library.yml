@@ -1,4 +1,4 @@
-name: "Deploy static Storybook"
+name: "Build @propfull/kit library"
 
 on:
   pull_request:

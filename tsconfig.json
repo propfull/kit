@@ -1,7 +1,8 @@
 {
   "extends": "@tsconfig/svelte/tsconfig.json",
   "include": [
-    "src/**/*"
+    "src/**/*",
+    "typings/**/*"
   ],
   "exclude": [
     "node_modules/*",
@@ -14,6 +15,9 @@
     "moduleResolution": "node",
     "types": [
       "svelte"
+    ],
+    "typeRoots": [
+      "typings"
     ],
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,

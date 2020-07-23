@@ -10,7 +10,7 @@ env:
   ARTEFACT_DIRECTORY: dist
 
 jobs:
-  build_and_deploy:
+  build_library:
     runs-on: ubuntu-20.04
 
     steps:
@@ -35,5 +35,5 @@ jobs:
       - name: Upload library artefact
         uses: actions/upload-artifact@v1
         with:
-          name: "@propfull/kit"
+          name: kit
           path: ${{ env.ARTEFACT_DIRECTORY }}

@@ -1,2 +1,4 @@
-export { default as Sample } from './sample.svelte';
-export { default as Button } from './button.svelte';
+import '../styles/globals.css';
+
+export { default as PfSample } from './sample.svelte';
+export { default as PfButton } from './button.svelte';

@@ -3,6 +3,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
 import svelte from 'rollup-plugin-svelte';
 import autoPreprocess from 'svelte-preprocess';
+import postcss from 'rollup-plugin-postcss';
 import { terser } from 'rollup-plugin-terser';
 
 import pkg from './package.json';
@@ -31,11 +32,9 @@ export default {
   plugins: [
     commonjs(),
     typescript({ sourceMap: !production }),
+    postcss({ extract: 'index.css' }),
     svelte({
       dev: !production,
-      css: css => {
-        css.write('dist/index.css', !production);
-      },
       preprocess: autoPreprocess(),
     }),
     resolve({

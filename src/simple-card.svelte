@@ -30,9 +30,9 @@
   }
 </style>
 
-<PfButton>
-  <div class={`root pf pf-${theme}`}>
+<div class={`root pf pf-${theme}`}>
+  <PfButton {theme}>
     <div class="title">{title}</div>
     <div class="desc">{description}</div>
-  </div>
-</PfButton>
+  </PfButton>
+</div>

@@ -1,3 +1,5 @@
+<svelte:options tag="pf-button" />
+
 <script lang="ts">
   import type { Theme } from "../typings/theme";
 

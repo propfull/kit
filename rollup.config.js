@@ -36,6 +36,7 @@ export default {
     svelte({
       dev: !production,
       preprocess: autoPreprocess(),
+      customElement: true,
     }),
     resolve({
       dedupe: [

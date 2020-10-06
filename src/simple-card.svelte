@@ -1,3 +1,5 @@
+<svelte:options tag="pf-simple-card"/> 
+
 <script lang="ts">
   import { Theme } from "../typings/theme";
   import PfButton from "./button.svelte";

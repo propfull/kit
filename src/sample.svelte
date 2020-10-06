@@ -1,3 +1,5 @@
+<svelte:options tag="pf-sample" />
+
 <script lang="ts">
   export let name: string;
 </script>

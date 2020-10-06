@@ -11,11 +11,9 @@
   .root {
     display: flex;
     flex-direction: column;
-    background-color: var(--pf__accent);
     color: var(--pf__font-color);
     padding: 0.5rem;
     border-radius: var(--pf__border-radius);
-    box-shadow: var(--pf__shadow);
     height: max();
   }
   .title {

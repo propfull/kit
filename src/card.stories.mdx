@@ -22,7 +22,7 @@ A simple card component to display a title and some content
 
 Here's another card, but this time around, the content is ridiculously long
 
-<Preview withSource='open'>
+<Preview>
     <Story name='long'>
         {{
             Component: PfCard,
@@ -34,14 +34,28 @@ Here's another card, but this time around, the content is ridiculously long
     </Story>
 </Preview>
 
-The card also takes the theme prop
-<Preview withSource='open'>
+The card also takes the theme prop.
+<Preview>
     <Story name='dark'>
         {{
             Component: PfCard,
             props: {
                 title: 'dark mode 😎',
                 content: 'Duis ex aliquip magna irure veniam eiusmod labore nisi eu laboris aliqua labore commodo.',
+                theme: 'dark'
+            }
+        }}
+    </Story>
+</Preview>
+
+The content is a slot so you can nest components
+<Preview>
+    <Story name='nesting'>
+        {{
+            Component: PfCard,
+            props: {
+                title: 'nesting ⪢',
+                content: `<p>First paragraph - Nulla commodo esse tempor deserunt aliqua. Non pariatur amet sit do irure. Laboris do do id consequat ad laboris do consequat ipsum commodo consequat aliqua incididunt. Commodo proident consequat labore nulla occaecat proident elit dolor ea non pariatur.</p> <p>Second - Eiusmod ea sint excepteur qui duis fugiat anim. Qui enim dolor amet et cupidatat culpa elit officia elit culpa. Eiusmod dolore excepteur nisi sint. Minim sunt deserunt tempor esse pariatur qui.</p>`,
                 theme: 'dark'
             }
         }}

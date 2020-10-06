@@ -1,10 +1,10 @@
 import { Meta, Preview, Story } from '@storybook/addon-docs/blocks';
 
-import PfCard from './card.svelte'
+import PfCard from './wrappers/card.wrapper.svelte'
 
 # PfCard
 
-A simple card component to display a title and some description
+A simple card component to display a title and some content
 
 <Meta title='molecules/PfCard' component={PfCard} />
 
@@ -14,13 +14,13 @@ A simple card component to display a title and some description
             Component: PfCard,
             props: {
                 title: 'portfolio',
-                description: 'Here\'s a little site that tells the world who I am.'
+                content: 'Here\'s a little site that tells the world who I am.'
             }
         }}
     </Story>
 </Preview>
 
-Here's another card, but this time around, the description is ridiculously long
+Here's another card, but this time around, the content is ridiculously long
 
 <Preview withSource='open'>
     <Story name='long'>
@@ -28,7 +28,7 @@ Here's another card, but this time around, the description is ridiculously long
             Component: PfCard,
             props: {
                 title: 'a catchy and a very very very very long title',
-                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consectetur odio ac est vulputate viverra. Duis quis odio tellus. Morbi id est porta odio sagittis bibendum pellentesque non urna. Sed sed justo quis libero efficitur elementum. Sed sed ultricies purus. Maecenas ornare viverra dui sed posuere. Cras laoreet lectus sed pretium rhoncus. Etiam interdum, risus efficitur hendrerit euismod, ligula magna accumsan lorem, sed pulvinar mi massa vitae nisi. Praesent pharetra tortor convallis eleifend ornare. Phasellus viverra viverra tellus, in facilisis est pellentesque vel. '
+                content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consectetur odio ac est vulputate viverra. Duis quis odio tellus. Morbi id est porta odio sagittis bibendum pellentesque non urna. Sed sed justo quis libero efficitur elementum. Sed sed ultricies purus. Maecenas ornare viverra dui sed posuere. Cras laoreet lectus sed pretium rhoncus. Etiam interdum, risus efficitur hendrerit euismod, ligula magna accumsan lorem, sed pulvinar mi massa vitae nisi. Praesent pharetra tortor convallis eleifend ornare. Phasellus viverra viverra tellus, in facilisis est pellentesque vel. '
             }
         }}
     </Story>
@@ -41,7 +41,7 @@ The card also takes the theme prop
             Component: PfCard,
             props: {
                 title: 'dark mode 😎',
-                description: 'Duis ex aliquip magna irure veniam eiusmod labore nisi eu laboris aliqua labore commodo.',
+                content: 'Duis ex aliquip magna irure veniam eiusmod labore nisi eu laboris aliqua labore commodo.',
                 theme: 'dark'
             }
         }}

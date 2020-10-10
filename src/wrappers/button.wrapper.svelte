@@ -2,8 +2,8 @@
   import Button from "../button.svelte";
   import { Theme } from "../../typings/theme";
 
-  export let content;
-  export let disabled;
+  export let content: any;
+  export let disabled: boolean;
   export let theme: Theme;
 </script>
 

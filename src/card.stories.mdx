@@ -1,0 +1,63 @@
+import { Meta, Preview, Story } from '@storybook/addon-docs/blocks';
+
+import PfCard from './wrappers/card.wrapper.svelte'
+
+# PfCard
+
+A simple card component to display a title and some content
+
+<Meta title='molecules/PfCard' component={PfCard} />
+
+<Preview withSource='open'>
+    <Story name='default'>
+        {{
+            Component: PfCard,
+            props: {
+                title: 'portfolio',
+                content: 'Here\'s a little site that tells the world who I am.'
+            }
+        }}
+    </Story>
+</Preview>
+
+Here's another card, but this time around, the content is ridiculously long
+
+<Preview>
+    <Story name='long'>
+        {{
+            Component: PfCard,
+            props: {
+                title: 'a catchy and a very very very very long title',
+                content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consectetur odio ac est vulputate viverra. Duis quis odio tellus. Morbi id est porta odio sagittis bibendum pellentesque non urna. Sed sed justo quis libero efficitur elementum. Sed sed ultricies purus. Maecenas ornare viverra dui sed posuere. Cras laoreet lectus sed pretium rhoncus. Etiam interdum, risus efficitur hendrerit euismod, ligula magna accumsan lorem, sed pulvinar mi massa vitae nisi. Praesent pharetra tortor convallis eleifend ornare. Phasellus viverra viverra tellus, in facilisis est pellentesque vel. '
+            }
+        }}
+    </Story>
+</Preview>
+
+The card also takes the theme prop.
+<Preview>
+    <Story name='dark'>
+        {{
+            Component: PfCard,
+            props: {
+                title: 'dark mode 😎',
+                content: 'Duis ex aliquip magna irure veniam eiusmod labore nisi eu laboris aliqua labore commodo.',
+                theme: 'dark'
+            }
+        }}
+    </Story>
+</Preview>
+
+The content is a slot so you can nest components
+<Preview>
+    <Story name='nesting'>
+        {{
+            Component: PfCard,
+            props: {
+                title: 'nesting ⪢',
+                content: `<p>First paragraph - Nulla commodo esse tempor deserunt aliqua. Non pariatur amet sit do irure. Laboris do do id consequat ad laboris do consequat ipsum commodo consequat aliqua incididunt. Commodo proident consequat labore nulla occaecat proident elit dolor ea non pariatur.</p> <p>Second - Eiusmod ea sint excepteur qui duis fugiat anim. Qui enim dolor amet et cupidatat culpa elit officia elit culpa. Eiusmod dolore excepteur nisi sint. Minim sunt deserunt tempor esse pariatur qui.</p>`,
+                theme: 'dark'
+            }
+        }}
+    </Story>
+</Preview>

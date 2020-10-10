@@ -3,7 +3,6 @@
   import PfButton from "./button.svelte";
 
   export let title: string;
-  export let description: string;
   export let theme: Theme = "light";
 </script>
 
@@ -30,9 +29,11 @@
   }
 </style>
 
-<PfButton>
-  <div class={`root pf pf-${theme}`}>
+<div class={`root pf pf-${theme}`}>
+  <PfButton {theme}>
     <div class="title">{title}</div>
-    <div class="desc">{description}</div>
-  </div>
-</PfButton>
+    <div class="desc">
+      <slot />
+    </div>
+  </PfButton>
+</div>

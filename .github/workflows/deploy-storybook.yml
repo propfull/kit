@@ -3,7 +3,7 @@ name: "Deploy static Storybook"
 on:
   push:
     branches:
-      - latest
+      - cool
 
 env:
   NODE_VERSION: "12.8.0"

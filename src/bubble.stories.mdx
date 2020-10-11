@@ -1,0 +1,71 @@
+import { Story, Preview } from '@storybook/addon-docs/blocks'; 
+import { action } from '@storybook/addon-actions';
+import { html } from 'lit-html';
+
+import PfBubble from './wrappers/bubble.wrapper.svelte';
+
+
+# bubble (wrapped)
+
+A bubble is a small area showing extra info about something. Tags, state information, etc,.
+
+<Meta title="atoms/bubble" />
+
+### A simple bubble
+<Preview withSource='open'>
+    <Story name='default'>
+        {{
+            Component: PfBubble,
+            props: {
+                content: '@propfull/bubble'
+            }
+        }}
+    </Story>
+</Preview>
+
+
+
+### With icons or emojis
+You can also add icons along with regular text.
+
+<Preview withSource='open'>
+    <Story name='with icon'>
+        {{
+            Component: PfBubble,
+            props: { content: 'locked 🔒' },
+        }}
+    </Story>
+</Preview>
+
+### Slot other elements
+PfBubbles can also have nested children as its content
+
+<Preview>
+    <Story name="nesting">
+        {{
+            Component: PfBubble,
+            props: {
+                content: `
+                <div style='display: flex; flex-direction: column; align-items: center'>
+                    <div>first line!</div>
+                    <div>second line!</div>
+                </div>`
+            },
+        }}
+    </Story>
+</Preview>
+
+### Theme
+bubbles can also be themed - with the `theme` prop, the default being the `light` theme.
+Here's how a bubble looks with the `dark` theme
+<Preview withSource='open'>
+    <Story name='dark'>
+        {{
+            Component: PfBubble,
+            props: {
+                content: 'dark mode',
+                theme: 'dark'
+            },
+        }}
+    </Story>
+</Preview>

@@ -3,10 +3,10 @@ name: "Build @propfull/kit library"
 on:
   pull_request:
     branches:
-      - latest
+      - cool
   push:
     branches:
-      - latest
+      - cool
 
 env:
   NODE_VERSION: "12.8.0"

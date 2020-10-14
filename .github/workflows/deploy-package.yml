@@ -28,6 +28,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ env.NODE_VERSION }}
+          registry-url: https://npm.pkg.github.com/
+          scope: '@propfull'
 
       - name: Build project
         run: pnpm run build
@@ -37,6 +39,9 @@ jobs:
         with:
           name: kit
           path: ${{ env.ARTEFACT_DIRECTORY }}
+
+      - name: Set registry
+        run: echo registry=https://npm.pkg.github.com/propfull >> .npmrc
       
       - name: Deploy to npm
         run: pnpm publish

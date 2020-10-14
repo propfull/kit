@@ -1,4 +1,5 @@
-name: "Deploy @propfull/kit package"
+
+name: "Deploy @propfull/kit package to Github Registry"
 
 on:
   push:
@@ -43,7 +44,7 @@ jobs:
       - name: Set registry
         run: echo registry=https://npm.pkg.github.com/propfull >> .npmrc
       
-      - name: Deploy to npm
+      - name: Deploy to Github Registry
         run: pnpm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.REGISTRY_TOKEN_FOR_GITHUB }}

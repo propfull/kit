@@ -1,0 +1,83 @@
+import { Meta, Preview, Story } from '@storybook/addon-docs/blocks';
+
+import PfHeader from './wrappers/header.wrapper.svelte'
+
+# PfHeader
+
+A simple card component to display a title and some content. The theme prop renders a light or dark themed header.
+
+<Meta title='molecules/PfHeader' component={PfHeader} />
+
+<Preview withSource='open'>
+    <Story name='default'>
+        {{
+            Component: PfHeader,
+            props: {
+                type: 'h1',
+                content: 'An h1'
+            }
+        }}
+    </Story>
+</Preview>
+
+The type prop allows rendering any header (h1 through h6)
+
+<Preview withSource='open'>
+    <Story name='h2'>
+        {{
+            Component: PfHeader,
+            props: {
+                type: 'h2',
+                content: 'An h2'
+            }
+        }}
+    </Story>
+</Preview>
+
+<Preview withSource='open'>
+    <Story name='h3'>
+        {{
+            Component: PfHeader,
+            props: {
+                type: 'h3',
+                content: 'An h3'
+            }
+        }}
+    </Story>
+</Preview>
+
+<Preview withSource='open'>
+    <Story name='h4'>
+        {{
+            Component: PfHeader,
+            props: {
+                type: 'h4',
+                content: 'An h4'
+            }
+        }}
+    </Story>
+</Preview>
+
+<Preview withSource='open'>
+    <Story name='h5'>
+        {{
+            Component: PfHeader,
+            props: {
+                type: 'h5',
+                content: 'An h5'
+            }
+        }}
+    </Story>
+</Preview>
+
+<Preview withSource='open'>
+    <Story name='h6'>
+        {{
+            Component: PfHeader,
+            props: {
+                type: 'h6',
+                content: 'An h6'
+            }
+        }}
+    </Story>
+</Preview>

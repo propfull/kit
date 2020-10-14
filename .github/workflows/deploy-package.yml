@@ -1,9 +1,6 @@
-name: "Build @propfull/kit library"
+name: "Deploy @propfull/kit package"
 
 on:
-  pull_request:
-    branches:
-      - cool
   push:
     branches:
       - cool
@@ -13,7 +10,7 @@ env:
   ARTEFACT_DIRECTORY: dist
 
 jobs:
-  build_library:
+  deploy_package:
     runs-on: ubuntu-20.04
 
     steps:
@@ -31,6 +28,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ env.NODE_VERSION }}
+          registry-url: https://npm.pkg.github.com/
+          scope: '@propfull'
 
       - name: Build project
         run: pnpm run build
@@ -40,3 +39,11 @@ jobs:
         with:
           name: kit
           path: ${{ env.ARTEFACT_DIRECTORY }}
+
+      - name: Set registry
+        run: echo registry=https://npm.pkg.github.com/propfull >> .npmrc
+      
+      - name: Deploy to npm
+        run: pnpm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.REGISTRY_TOKEN }}

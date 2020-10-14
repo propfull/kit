@@ -1,0 +1,48 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import PfPaging from './paging.svelte';
+
+# PfPaging
+
+A simple card component to display a title and some content
+
+<Meta title='molecules/PfPaging' component={PfPaging} />
+
+This the default look - when there is only one page
+<Preview withSource='open'>
+  <Story name='default'>
+    {{
+      Component: PfPaging,
+      props: {
+        start: 1,
+        end: 5
+      }
+    }}
+  </Story>
+</Preview>
+
+When there are less than five pages
+<Preview withSource='open'>
+  <Story name='less than 3 pages'>
+    {{
+      Component: PfPaging,
+      props: {
+        start: 1,
+        end: 5,
+      }
+    }}
+  </Story>
+</Preview>
+
+Paging also supports the theme prop
+<Preview withSource='open'>
+  <Story name='dark'>
+    {{
+      Component: PfPaging,
+      props: {
+        start: 1,
+        end: 5,
+        theme: 'dark',
+      }
+    }}
+  </Story>
+</Preview>

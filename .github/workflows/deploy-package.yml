@@ -10,7 +10,7 @@ env:
   ARTEFACT_DIRECTORY: dist
 
 jobs:
-  build_library:
+  deploy_package:
     runs-on: ubuntu-20.04
 
     steps:

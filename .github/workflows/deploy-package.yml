@@ -3,7 +3,7 @@ name: "Deploy @propfull/kit package"
 on:
   push:
     branches:
-      - feat/publish-to-npm
+      - cool
 
 env:
   NODE_VERSION: "12.8.0"

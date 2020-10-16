@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Theme } from "../typings/theme";
+  import { Theme } from "./typings/theme";
   import PfButton from "./button.svelte";
 
   export let title: string;

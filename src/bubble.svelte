@@ -1,5 +1,5 @@
 <script lang="ts">
-    import type { Theme } from "../typings/theme";
+    import type { Theme } from "./typings/theme";
   
     export let theme: Theme = "light";
 </script>

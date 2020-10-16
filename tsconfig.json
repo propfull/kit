@@ -2,7 +2,7 @@
   "extends": "@tsconfig/svelte/tsconfig.json",
   "include": [
     "src/**/*",
-    "typings/**/*"
+    "src/typings/**/*"
   ],
   "exclude": [
     "node_modules/*",
@@ -17,7 +17,7 @@
       "svelte"
     ],
     "typeRoots": [
-      "typings"
+      "src/typings"
     ],
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,

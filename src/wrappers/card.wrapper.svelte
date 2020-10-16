@@ -1,6 +1,6 @@
 <script lang="ts">
     import Card from "../card.svelte";
-    import { Theme } from "../../typings/theme";
+    import { Theme } from "../typings/theme";
   
     export let content: any;
     export let title: string

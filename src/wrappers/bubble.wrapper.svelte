@@ -1,6 +1,6 @@
 <script lang="ts">
   import Bubble from "../bubble.svelte";
-  import { Theme } from "../../typings/theme";
+  import { Theme } from "../typings/theme";
 
   export let content: any;
   export let theme: Theme;

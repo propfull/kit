@@ -1,6 +1,6 @@
 <script lang="ts">
   import { HeaderType } from "./typings/header-type";
-  import { Theme } from "../typings/theme";
+  import { Theme } from "./typings/theme";
 
   export let type: HeaderType = 'h1';
   export let theme: Theme = "light";

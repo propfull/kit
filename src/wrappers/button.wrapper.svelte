@@ -1,6 +1,6 @@
 <script lang="ts">
   import Button from "../button.svelte";
-  import { Theme } from "../../typings/theme";
+  import { Theme } from "../typings/theme";
 
   export let content: any;
   export let disabled: boolean;

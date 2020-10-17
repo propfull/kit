@@ -1,7 +1,7 @@
 <script lang="ts">
   import Header from "../header.internal.svelte";
-  import { Theme } from "../typings/theme";
-  import { HeaderType } from "../typings/header-type";
+  import type { Theme } from "../typings/theme";
+  import type { HeaderType } from "../typings/header-type";
 
   export let content: any;
   export let type: HeaderType;

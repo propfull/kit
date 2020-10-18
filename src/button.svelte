@@ -3,10 +3,11 @@
 
   export let disabled: boolean = false;
   export let theme: Theme = "light";
+  export let style: any = {};
 </script>
 
 <style>
-  button {
+  .pf-button {
     outline: none;
     border: 0.25rem solid transparent;
     background-color: var(--pf__accent);
@@ -20,27 +21,32 @@
       background-color var(--pf__tn);
   }
 
-  button:hover:enabled {
+  .pf-button:hover:enabled {
     box-shadow: var(--pf__shadow--focus);
     transform: translateY(0.125rem);
   }
 
-  button:active:enabled {
+  .pf-button:active:enabled {
     box-shadow: none;
     transform: translateY(0.25rem);
   }
 
-  button:disabled {
+  .pf-button:disabled {
     background-color: var(--pf__accent--disabled);
     cursor: not-allowed;
     box-shadow: none;
   }
 
-  button:focus {
+  .pf-button:focus {
     background-color: var(--pf__accent--focus);
   }
 </style>
 
-<button type="button" {disabled} on:click class={`pf pf-${theme}`}>
+<button
+  type="button"
+  {disabled}
+  on:click
+  class={`pf-button pf pf-${theme}`}
+  {style}>
   <slot />
 </button>

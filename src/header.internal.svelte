@@ -2,7 +2,7 @@
   import type { HeaderType } from "./typings/header-type";
   import type { Theme } from "./typings/theme";
 
-  export let type: HeaderType = 'h1';
+  export let type: HeaderType = "h1";
   export let theme: Theme = "light";
 </script>
 
@@ -22,28 +22,28 @@
   }
 </style>
 
-{#if type === 'h1'}
-  <h1 class={`pf pf-${theme}`}>
+{#if type === 'h6'}
+  <h6 class={`pf pf-${theme}`}>
     <slot />
-  </h1>
-{:else if type === 'h2'}
-  <h2 class={`pf pf-${theme}`}>
-    <slot />
-  </h2>
-{:else if type === 'h3'}
-  <h3 class={`pf pf-${theme}`}>
-    <slot />
-  </h3>
-{:else if type === 'h4'}
-  <h4 class={`pf pf-${theme}`}>
-    <slot />
-  </h4>
+  </h6>
 {:else if type === 'h5'}
   <h5 class={`pf pf-${theme}`}>
     <slot />
   </h5>
-{:else if type === 'h6'}
-  <h6 class={`pf pf-${theme}`}>
+{:else if type === 'h4'}
+  <h4 class={`pf pf-${theme}`}>
     <slot />
-  </h6>
+  </h4>
+{:else if type === 'h3'}
+  <h3 class={`pf pf-${theme}`}>
+    <slot />
+  </h3>
+{:else if type === 'h2'}
+  <h2 class={`pf pf-${theme}`}>
+    <slot />
+  </h2>
+{:else}
+  <h1 class={`pf pf-${theme}`}>
+    <slot />
+  </h1>
 {/if}

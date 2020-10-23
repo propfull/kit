@@ -4,6 +4,7 @@
   import type { Theme } from "../typings/theme";
 
   export let content: any;
+  export let push: boolean;
   export let title: any;
   export let theme: Theme;
 </script>
@@ -17,7 +18,7 @@
   }
 </style>
 
-<Card on:click {theme}>
+<Card on:click {theme} {push}>
   <div class="title" slot="title">
     <Header theme="dark" type="h1">
       {@html title}

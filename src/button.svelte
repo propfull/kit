@@ -35,10 +35,6 @@
     cursor: not-allowed;
     box-shadow: none;
   }
-
-  /* .push.pf-button:focus {
-    background-color: var(--pf__accent--focus);
-  } */
 </style>
 
 <button

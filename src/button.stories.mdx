@@ -94,3 +94,20 @@ This makes sure the button cannot be clicked and shows an appropriate cursor.
         }}
     </Story>
 </Preview>
+
+#### 1. No push  effects
+For internal uses and using the button around things like cards, you can turn off the push effects as well.
+
+<Preview withSource='open'>
+    <Story name='no-push-effect'>
+        {{
+            Component: PfButton,
+            props: {
+                content: 'no push effect here',
+                push: false,
+            },
+            on: { click: action('on:click') }
+        }}
+    </Story>
+</Preview>
+

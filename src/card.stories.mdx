@@ -61,3 +61,18 @@ The content is a slot so you can nest components
         }}
     </Story>
 </Preview>
+
+If a card is does not need push effects, the push prop can be used to turn off that effect.
+<Preview>
+    <Story name='push'>
+        {{
+            Component: PfCard,
+            props: {
+                title: 'push effects',
+                content: `<p>If a card is does not need push effects, the push prop can be used to turn off that effect.</p> <p>Aute mollit deserunt veniam reprehenderit aliqua do nisi. Incididunt commodo sunt Lorem ut aliqua deserunt minim enim quis sint. Sit cupidatat do aliquip pariatur dolor occaecat adipisicing cupidatat. Quis do consequat ad amet occaecat magna..</p>`,
+                theme: 'dark',
+                push: false,
+            }
+        }}
+    </Story>
+</Preview>

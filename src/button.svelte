@@ -2,8 +2,9 @@
   import type { Theme } from "./typings/theme";
 
   export let disabled: boolean = false;
+  export let push: boolean = true;
   export let theme: Theme = "light";
-  export let style: any = {};
+  export let style: string = '';
 </script>
 
 <style>
@@ -15,17 +16,17 @@
     padding: 0.5rem;
     font-weight: 800;
     border-radius: 0;
-    cursor: pointer;
     box-shadow: var(--pf__shadow);
     transition: box-shadow var(--pf__tn), transform var(--pf__tn),
       background-color var(--pf__tn);
   }
 
-  .pf-button:hover:enabled {
+  .push.pf-button:hover:enabled {
+    cursor: pointer;
     box-shadow: var(--pf__shadow--focus);
   }
 
-  .pf-button:active:enabled {
+  .push.pf-button:active:enabled {
     box-shadow: none;
   }
 
@@ -34,10 +35,6 @@
     cursor: not-allowed;
     box-shadow: none;
   }
-
-  .pf-button:focus {
-    background-color: var(--pf__accent--focus);
-  }
 </style>
 
 <button
@@ -45,6 +42,7 @@
   {disabled}
   on:click
   class={`pf-button pf pf-${theme}`}
+  class:push
   {style}>
   <slot />
 </button>

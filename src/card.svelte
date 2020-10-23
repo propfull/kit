@@ -2,6 +2,7 @@
   import type { Theme } from "./typings/theme";
   import PfButton from "./button.svelte";
 
+  export let push: boolean = true;
   export let theme: Theme = "light";
 </script>
 
@@ -26,7 +27,7 @@
 </style>
 
 <div class={`pf-card pf pf-${theme}`}>
-  <PfButton {theme} style={'padding: 0; border: none'}>
+  <PfButton {theme} style={'padding: 0; border: none'} {push}>
     <div class="title">
       <slot name="title" />
     </div>

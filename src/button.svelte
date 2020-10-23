@@ -12,9 +12,9 @@
     border: 0.25rem solid transparent;
     background-color: var(--pf__accent);
     color: var(--pf__font-color);
-    padding: 0.75rem;
+    padding: 0.5rem;
     font-weight: 800;
-    border-radius: 0.5rem;
+    border-radius: 0;
     cursor: pointer;
     box-shadow: var(--pf__shadow);
     transition: box-shadow var(--pf__tn), transform var(--pf__tn),
@@ -23,12 +23,10 @@
 
   .pf-button:hover:enabled {
     box-shadow: var(--pf__shadow--focus);
-    transform: translateY(0.125rem);
   }
 
   .pf-button:active:enabled {
     box-shadow: none;
-    transform: translateY(0.25rem);
   }
 
   .pf-button:disabled {

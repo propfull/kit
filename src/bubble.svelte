@@ -11,7 +11,8 @@
     border: 0.25rem solid transparent;
     background-color: var(--pf__accent);
     color: var(--pf__font-color);
-    padding: 0.75rem;
+    padding: 0.25rem;
+    font-size: 0.75rem;
     font-weight: 800;
     border-radius: 2rem;
     box-shadow: var(--pf__shadow);

@@ -1,6 +1,6 @@
 {
   "name": "@propfull/kit",
-  "version": "0.0.0-alpha.9",
+  "version": "0.0.0-alpha.11",
   "description": "A design system for propfull",
   "license": "MIT",
   "svelte": "src/index.ts",

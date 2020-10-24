@@ -41,6 +41,10 @@ jobs:
           name: kit
           path: ${{ env.ARTEFACT_DIRECTORY }}
 
+      - name: write npmrc
+        run: echo 'registry="https://registry.npmjs.org" \
+        //registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}' > .npmrc
+
       - name: Deploy to npm
         run: npm publish --access public
         env:

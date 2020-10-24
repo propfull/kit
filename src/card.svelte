@@ -12,7 +12,8 @@
     flex-direction: column;
     color: var(--pf__font-color);
     border-radius: var(--pf__border-radius);
-    height: max();
+    height: 100%;
+    width: 100%;
   }
   .title {
     text-align: left;
@@ -27,7 +28,7 @@
 </style>
 
 <div class={`pf-card pf pf-${theme}`}>
-  <PfButton {theme} style={'padding: 0; border: none'} {push}>
+  <PfButton {theme} style={'padding: 0; border: none; height: 100%'} {push}>
     <div class="title">
       <slot name="title" />
     </div>

@@ -1,6 +1,6 @@
 <script lang="ts">
   import PfButton from "./button.svelte";
-  import { Theme } from "../typings/theme";
+  import { Theme } from "./typings/theme";
 
   export let start: number = 1;
   export let end: number = 1;

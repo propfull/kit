@@ -1,4 +1,4 @@
-name: "Deploy @propfull/kit package"
+name: "Deploy @propfull/kit package to NPM Registry"
 
 on:
   push:
@@ -28,8 +28,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ env.NODE_VERSION }}
-          registry-url: https://npm.pkg.github.com/
           scope: '@propfull'
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.REGISTRY_TOKEN }}
 
       - name: Build project
         run: pnpm run build
@@ -40,10 +41,12 @@ jobs:
           name: kit
           path: ${{ env.ARTEFACT_DIRECTORY }}
 
-      - name: Set registry
-        run: echo registry=https://npm.pkg.github.com/propfull >> .npmrc
-      
+      - name: write npmrc
+        run: |
+          echo 'registry="https://registry.npmjs.org" 
+          //registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}' > .npmrc
+
       - name: Deploy to npm
-        run: pnpm publish
+        run: npm publish --access public
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.REGISTRY_TOKEN_FOR_GITHUB }}
+          NODE_AUTH_TOKEN: ${{ secrets.REGISTRY_TOKEN_FOR_NPM }}

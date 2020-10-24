@@ -1,0 +1,50 @@
+
+name: "Deploy @propfull/kit package to Github Registry"
+
+on:
+  push:
+    branches:
+      - cool
+
+env:
+  NODE_VERSION: "12.8.0"
+  ARTEFACT_DIRECTORY: dist
+
+jobs:
+  deploy_package:
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Checkout to branch
+        uses: actions/checkout@v2
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v1.2.0
+        with:
+          version: 4.11.1
+          run_install: |
+            - recursive: true
+
+      - name: Setup node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          registry-url: https://npm.pkg.github.com/
+          scope: '@propfull'
+
+      - name: Build project
+        run: pnpm run build
+
+      - name: Upload library artefact
+        uses: actions/upload-artifact@v1
+        with:
+          name: kit
+          path: ${{ env.ARTEFACT_DIRECTORY }}
+
+      - name: Set registry
+        run: echo registry=https://npm.pkg.github.com/propfull >> .npmrc
+      
+      - name: Deploy to Github Registry
+        run: pnpm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.REGISTRY_TOKEN_FOR_GITHUB }}

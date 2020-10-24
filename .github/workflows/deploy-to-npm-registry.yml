@@ -3,7 +3,7 @@ name: "Deploy @propfull/kit package to NPM Registry"
 on:
   push:
     branches:
-      - feat/deploy-to-npmjs
+      - cool
 
 env:
   NODE_VERSION: "12.8.0"

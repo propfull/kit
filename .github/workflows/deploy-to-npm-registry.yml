@@ -30,7 +30,7 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
           scope: '@propfull'
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.REGISTRY_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.REGISTRY_TOKEN_FOR_NPM }}
 
       - name: Build project
         run: pnpm run build

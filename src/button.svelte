@@ -15,7 +15,7 @@
     color: var(--pf__font-color);
     padding: 0.5rem;
     font-weight: 800;
-    border-radius: 0;
+    border-radius: 0.5rem;
     box-shadow: var(--pf__shadow);
     transition: box-shadow var(--pf__tn), transform var(--pf__tn),
       background-color var(--pf__tn);

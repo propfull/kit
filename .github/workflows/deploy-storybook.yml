@@ -36,6 +36,6 @@ jobs:
       - name: Deploy storybook to github pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.REGISTRY_TOKEN_FOR_GITHUB }}
           publish_dir: ${{ env.EXPORT_DIRECTORY }}
           publish_branch: ${{ env.GITHUB_PAGES_PUBLISH_BRANCH }}

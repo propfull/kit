@@ -1,10 +1,11 @@
 
 name: "Deploy @propfull/kit package to Github Registry"
 
-on:
-  push:
-    branches:
-      - cool
+# note: turning off publish to github registry
+# on:
+#   push:
+#     branches:
+#       - cool
 
 env:
   NODE_VERSION: "12.8.0"
